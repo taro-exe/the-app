@@ -5,10 +5,10 @@ function Gallery(props) {
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/1.jpg" class="d-block w-100" alt="pix.jpg"/>
+          <img src="./1.jpg" class="d-block w-100" alt="pix.jpg"/>
         </div>
         <div class="carousel-item">
-          <img src="/2.jpg" class="d-block w-100" alt="pix2.jpg"/>
+          <img src="./2.jpg" class="d-block w-100" alt="pix2.jpg"/>
         </div>
         <div class="carousel-item">
           <img src="./3.jpg" class="d-block w-100" alt="pix3.jpg"/>
