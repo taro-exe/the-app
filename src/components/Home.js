@@ -30,7 +30,6 @@ function Home(props) {
 
     return (
         <>
-        
             <div className='container my-3'>
             <h1 className={`text-${props.mode==='light'?'dark':'light'}`}>Text</h1>
                 <div className="mb-3 my-3">
