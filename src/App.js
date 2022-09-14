@@ -2,14 +2,14 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Alert from './components/Alert';
-import Gallery from './components/Gallery'
+// import Gallery from './components/Gallery'
 import { useState } from 'react';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
 
@@ -39,14 +39,20 @@ function App() {
 
 
   return (
-    <Router>
-      <Navbar title='App' mode={mode} toggleDark={toggleDark} />
-      <Alert alert={alert} />
-      <Routes>
-        <Route path="/" element={<Home showAlert={showAlert} mode={mode} />} />
-        <Route path="/gallery" element={<Gallery mode={mode}/>} />
-      </Routes>
-    </Router>
+    // <Router>
+    //   <Navbar title='App' mode={mode} toggleDark={toggleDark} />
+    //   <Alert alert={alert} />
+    //   <Routes>
+    //     <Route path="/" element={<Home showAlert={showAlert} mode={mode} />} />
+    //     <Route path="/gallery" element={<Gallery mode={mode}/>} />
+    //   </Routes>
+    // </Router>
+    <>
+    <Navbar title='App' mode={mode} toggleDark={toggleDark} />
+    <Alert alert={alert} />
+    <Home showAlert={showAlert} mode={mode} />
+    {/* <Gallery mode={mode}/> */}
+    </>
   );
 }
 
