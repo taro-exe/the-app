@@ -17,6 +17,7 @@ function Home(props) {
         const text = document.getElementById('exampleFormControlTextarea1');
         text.select();
         navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
         props.showAlert('Copied to Clipboard','success');
     }
 
@@ -34,10 +35,10 @@ function Home(props) {
             <h1 className={`text-${props.mode==='light'?'dark':'light'}`}>Text</h1>
                 <div className="mb-3 my-3">
                     <textarea className="form-control" placeholder='Enter your text here' id="exampleFormControlTextarea1" value={text} onChange={handleOnChange} rows="6" style={{background: props.mode==='light'?'white':'black', color: props.mode==='light'?'black':'white'}}></textarea>
-                    <button type="button" className="btn btn-primary my-3" onClick={toUp}>Convert to Uppercase</button>
-                    <button type="button" className="btn btn-primary my-3 mx-3" onClick={toLow}>Convert to Lowercase</button>
-                    <button type="button" className="btn btn-primary my-3" onClick={copyText}>Copy Text</button>
-                    <button type="button" className="btn btn-primary my-3 mx-3" onClick={clearText}>Clear Text</button>
+                    <button disabled={text.length===0} type="button" className="btn btn-primary my-3" onClick={toUp}>Convert to Uppercase</button>
+                    <button disabled={text.length===0} type="button" className="btn btn-primary my-3 mx-3" onClick={toLow}>Convert to Lowercase</button>
+                    <button disabled={text.length===0} type="button" className="btn btn-primary my-3" onClick={copyText}>Copy Text</button>
+                    <button disabled={text.length===0} type="button" className="btn btn-primary my-3 mx-3" onClick={clearText}>Clear Text</button>
                 </div>
             </div>
         </>
